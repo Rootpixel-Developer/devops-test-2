@@ -1,7 +1,7 @@
 ## Installation
 clone repository
 ```sh
-git clone https://github.com/Rootpixel-Developer/devops-test.git
+git clone https://github.com/Rootpixel-Developer/devops-test-2.git
 ```
 install vendor and depedency
 ```sh
