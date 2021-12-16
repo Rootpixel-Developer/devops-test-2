@@ -28,7 +28,7 @@
     <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('user.store') }}" method="POST">
                     @csrf
                     <div class="modal-header">
                         <h5 class="modal-title" id="formModalLabel">Add User</h5>
@@ -38,7 +38,7 @@
                         <img id="profilePicture" src="{{ asset('storage/user/default.png') }}" class="img-thumbnail" alt="">
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Profile Picture</label>
-                            <input class="form-control" accept="image/*" type="file" id="formFile" name="profile_picture">
+                            <input class="form-control" accept="image/*" type="file" id="formFile" name="profile_picture" required>
                         </div>
                         <div class="mb-3">
                             <label>Name</label>
