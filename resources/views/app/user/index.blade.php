@@ -116,7 +116,7 @@
                 showLoaderOnConfirm: true,
                 preConfirm: async () => {
                     try {
-                        const response = await window.axios.delete('destroy/'+id);
+                        const response = await window.axios.delete('user/destroy/'+id);
                         if (response.statusText!="OK") {
                             throw new Error(response.statusText);
                         }
@@ -141,14 +141,14 @@
         }
 
         window.editFormModal = function (id) {
-            $('form').attr('action','update/'+id);
+            $('form').attr('action','user/update/'+id);
             $('#formModalLabel').html('Edit User');
             $('button[type="submit"]').text('Update');
             $('#formModal').modal('show');
             $('button[type="submit"]').attr('disabled',true);
             $('.loading-modal').show();
             $('.content-modal').hide();
-            window.axios.get('show/'+id).then(function (response) {
+            window.axios.get('/user/show/'+id).then(function (response) {
                 $('button[type="submit"]').attr('disabled',false);
                 const data = response.data;
                 $('input[name="name"]').val(data.name);
