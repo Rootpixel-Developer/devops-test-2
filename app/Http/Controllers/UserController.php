@@ -67,7 +67,7 @@ class UserController extends Controller
         Storage::putFileAs('public/user',  $request->file('profile_picture'), $filename);
 
         $user = User::create([
-            // 'name'              => $request->name,
+            'name'              => $request->name,
             'email'             => $request->email,
             'password'          => Hash::make($request->password),
             'profile_picture'   => $filename
