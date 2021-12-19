@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card">
-        <div class="card-header">{{ __('Dashboard') }}</div>
+        <div class="card-header">{{ __('Dashboard') }} V2.0</div>
 
         <div class="card-body">
             @if (session('status'))
